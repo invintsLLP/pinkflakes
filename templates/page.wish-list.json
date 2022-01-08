@@ -6,6 +6,7 @@
     },
     "16260090911bd7e802": {
       "type": "home-custom-block-spotlight",
+      "disabled": true,
       "blocks": {
         "16260090911bd7e802-0": {
           "type": "image",

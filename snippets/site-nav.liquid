@@ -3,6 +3,7 @@ List out your main-menu linklist (default)
 More info on linklists:
 - http://docs.shopify.com/themes/liquid-variables/linklists
 {% endcomment %}
+<div class="header-menu">
 <ul class="site-nav">
     {% if search.terms != blank and template contains 'search' %}
         {% assign hide_menu_load = false %}
@@ -117,7 +118,7 @@ More info on linklists:
     {% endif %}
 
     <li class="{% if hide_menu_load %}hide_menu_load {% endif %} menu-lv-1 item{% if linklists[link.handle] != empty %} dropdown{% if is_megamenu %} mega-menu{% else %} no-mega-menu{% endif %}{% endif %}{% if text_sale_item contains text_sale %} active_sale{% endif %}">
-        <a class="{%if linklists[link.handle] != empty %}menu__moblie {% endif %}{% if link.active %}current{% endif %}"  href="{{ link.url }}">
+        <a class="mainmenu-block {%if linklists[link.handle] != empty %}menu__moblie {% endif %}{% if link.active %}current{% endif %}"  href="{{ link.url }}">
             {% render 'multilang' with link.title %}
 
             {% if linklists[link.handle] != empty %}
@@ -146,7 +147,7 @@ More info on linklists:
         </a>
 
         {% if linklists[link.handle] != empty and template.suffix == 'mega' %}
-        <div class="sub-menu-mobile menu-mb-translate {{ block_style }}">
+        <div class="main-sub-block sub-menu-mobile menu-mb-translate {{ block_style }}">
             <div class="menu-mb-title">
                 <span class="icon-dropdown">
                 <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -205,4 +206,9 @@ More info on linklists:
     {% endfor %}
     
 </ul>
+</div>
+<div id="pagination-container" class="header-navigation">
+  <span class="previous"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve"><g><g><polygon points="207.093,30.187 176.907,0 48.907,128 176.907,256 207.093,225.813 109.28,128   "/></g></g></svg></span>
+  <span class="next next-active"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve"><g><g><polygon points="207.093,30.187 176.907,0 48.907,128 176.907,256 207.093,225.813 109.28,128   "/></g></g></svg></span>
+</div>
 

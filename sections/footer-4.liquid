@@ -32,7 +32,20 @@
                         </div>
                         {% endif %} 
                     {% endif %}
-                    </div>                   
+                    </div>  
+                  
+                    {% if section.settings.footer_social_enable %}
+                    <div class="footer-social">
+                        {% if section.settings.footer_social_title != blank %}
+                        <h3 class="foot-title">
+                            {% render 'multilang' with section.settings.footer_social_title %}
+                        </h3>
+                        {% endif %}
+                        <div class="groups-block">
+                            {% render 'social-media' %} 
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
                 {% endif %}
 
@@ -80,18 +93,6 @@
 
                 {% if section.settings.footer_newsletter_enable or section.settings.footer_social_enable %}
                 <div class="col-12 col-md-12 col-xl-3 newsleter-col">
-                    {% if section.settings.footer_social_enable %}
-                    <div class="footer-social">
-                        {% if section.settings.footer_social_title != blank %}
-                        <h3 class="foot-title">
-                            {% render 'multilang' with section.settings.footer_social_title %}
-                        </h3>
-                        {% endif %}
-                        <div class="groups-block">
-                            {% render 'social-media' %} 
-                        </div>
-                    </div>
-                    {% endif %}
                     {% if section.settings.footer_newsletter_enable %}
                     <div class="footer-newsletter">
                         {% if section.settings.footer_newsletter_title != blank %}

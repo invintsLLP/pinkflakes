@@ -109,6 +109,7 @@
     "popular_products_collection": "supermarket-all",
     "popular_products_limit": 5,
     "display_popup_newsletter": true,
+    "popup_newsletter_expire": "24",
     "newsletter": "shopify:\/\/shop_images\/newsletter.jpg",
     "popup_newsletter_title": "Join Our Mailing List",
     "popup_newsletter_des": "Sign Up for exclusive updates,  <br>new arrivals & insider-only discounts",
@@ -161,7 +162,7 @@
     "btn_1_bg_color": "#000000",
     "btn_1_border_color": "#000000",
     "btn_1_text_color": "#ffffff",
-    "btn_2_bg_color": "#fff",
+    "btn_2_bg_color": "#ffffff",
     "btn_2_border_color": "#000000",
     "btn_2_text_color": "#000000",
     "btn_3_bg_color": "#000000",
@@ -1388,10 +1389,17 @@
               "link_banner_first_style_4": ""
             }
           },
-          "9e4e3fe7-1ddc-42a1-9a09-af24c2990b37": {
+          "31d740bd-001b-4576-9fe3-1b4df23fff4b": {
             "type": "style_4",
             "settings": {
               "megamenu_items_4": "Bags",
+              "link_banner_first_style_4": ""
+            }
+          },
+          "2c6f8a32-7f61-4bac-82e9-b6c73630f08a": {
+            "type": "style_4",
+            "settings": {
+              "megamenu_items_4": "Heels",
               "link_banner_first_style_4": ""
             }
           }
@@ -1405,7 +1413,8 @@
           "86427ca7-92b0-45ce-9fae-36c91ac793c0",
           "7d5eeaa0-c450-4a0c-8abf-f420ea4db010",
           "62914202-eeae-4b5c-83a0-0b4e70a507a5",
-          "9e4e3fe7-1ddc-42a1-9a09-af24c2990b37"
+          "31d740bd-001b-4576-9fe3-1b4df23fff4b",
+          "2c6f8a32-7f61-4bac-82e9-b6c73630f08a"
         ],
         "settings": {
           "display_fixtop_menu": true,
@@ -2595,7 +2604,7 @@
           "footer_link_hover_color": "#555555",
           "bg_footer_line_color": "#ebebeb",
           "display_store_location": true,
-          "footer_info_store": "37 South Mugda Dhaka, Mugda Dhaka, PO : 1214",
+          "footer_info_store": "",
           "footer_social_enable": true,
           "footer_social_title": "FOLLOW US",
           "social_icon_color": "#555555",

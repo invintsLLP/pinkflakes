@@ -145,9 +145,11 @@
                   <h1 class="product-title">
                       {% render 'multilang' with product.title %}
                   </h1>
-
+                  <a href="#looxReviews" class="looxrating">
+                  <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
+                  </a>
                   {% if section.settings.display_product_reviews or section.settings.show_sold_in %}
-                  <div class="group_item">
+                  <div class="">
                       {% if section.settings.display_product_reviews %}
                       <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
                       {% endif %}
@@ -331,7 +333,18 @@
                       {% endif %}
                       <input type="hidden" id="product_regular_price" name="product_regular_price" value="{{ product.price }}">
                   </div>
-
+                  <script src="//cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js" type="text/javascript"></script>
+                  <div class="dg-shipping-date">
+                  <p>
+                  <img src="https://cdn.shopify.com/s/files/1/2692/4812/files/dollar-symbol.png?7836362982984239286" style="height:25px;float:left;margin-right:10px;padding-bottom: 4px;">Free returns <span>under 30 days</span>
+                  </p>
+                  <p>
+                  <img src="https://cdn.shopify.com/s/files/1/2692/4812/files/package_1_4fdab5e4-e664-4a7d-be7b-838d8ff12915.png?4359582636050475579" style="height:25px;float:left;margin-right:10px;padding-bottom: 3px;">Only available <span>online</span>
+                  </p>
+                  <p>
+                  <img src="https://cdn.shopify.com/s/files/1/2692/4812/files/truck.png?8138466027095184927" style="height:25px;float:left;margin-right:10px;padding-bottom: 3px;">Delivery estimated within <span id="fromDate">20/11</span> and <span id="toDate">29/11</span>
+                  </p>
+                  </div>
                   {% if product.description contains '[countdown]' %}
                   {% assign des = product.description | split:'[/countdown]' | last %}
                   {% if des contains '[custom tab]'%}

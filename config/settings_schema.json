@@ -2800,7 +2800,7 @@
       {
         "type": "text",
         "id": "popup_newsletter_expire",
-        "label": "Newsletter Popup shows again after (days)",
+        "label": "Newsletter Popup shows again after (hours)",
         "default": "1"
       },
       {

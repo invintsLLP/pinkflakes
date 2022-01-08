@@ -1,6 +1,6 @@
 {% if settings.display_popup_newsletter %}
 {% if settings.display_newsletter_toolbar and settings.text_toolbar != blank %}
-<div class="newsletter-toolbar{% if settings.position_toolbar == 'right' %} align-right{% endif %}" data-toolbar-newsletter>
+<div class="newsletter-toolbar {% if settings.position_toolbar == 'right' %} align-right{% endif %}" data-toolbar-newsletter>
     <div class="toolbar--social">
         {% if settings.display_popup_social %}
         <div class="icon-social">
@@ -13,7 +13,7 @@
     </div>
 </div>
 {% endif %}
-<div class="wrapper-newsletter halo-modal" data-newsletter data-delay="{{settings.popup_newsletter_delay | times:1000}}" data-expire="{{ settings.popup_newsletter_expire }}">
+<div class="wrapper-newsletter halo-modal "  data-delay="{{settings.popup_newsletter_delay | times:1000}}" data-expire="{{ settings.popup_newsletter_expire }}">
     <div class="modal-overlay">
         <div class="halo-modal-content">
             <a class="close close-window" title="{{ 'cart.ajax_cart.close' | t }}">

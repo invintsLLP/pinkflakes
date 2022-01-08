@@ -2186,6 +2186,7 @@
                 var selectedSwatchOpt3 = productItemLayout.find('.selector-wrapper-3').find('input:checked').val();
                 swatches.removeClass('soldout');
                 swatches.find(':radio').prop('disabled',false);
+              console.log(thisVal);
                 switch (optionIdx){
                     case 0:
 
@@ -2677,7 +2678,6 @@
 
         initColorSwatchGrid: function () {
             var itemSwatchSlt = '.item-swatch li label';
-
             body.off('click.toggleClass').on('click.toggleClass', itemSwatchSlt, function () {
                 $(this).parents('.inner-top').find('.action').removeClass('show-popup-qs');
                 var self = $(this),
